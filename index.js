@@ -69,4 +69,11 @@ console.log("* Clear for takeoff: YES");
 
 
 // BONUS: Use readline-sync to prompt the user to enter the number of astronauts going on the mission.
-
+const input = require('readline-sync');
+astronautCount = input.question("What is the astronaut count?");
+astronautCount = Number(astronautCount);
+crewMassKg = astronautCount * averageAstronautMassKg;
+totalMassKg = crewMassKg + fuelMassKg + shuttleMassKg;
+console.log("Astronaut Count: " + astronautCount);
+console.log("crewMassKg: " +crewMassKg );
+console.log("Total Masss Kg: " + totalMassKg);
